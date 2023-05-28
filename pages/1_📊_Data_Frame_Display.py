@@ -4,10 +4,10 @@ import pandas as pd
 url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/data_for_EDA.csv'
 df = pd.read_csv(url)
 
-st.set_page_config(page_title="Data Frame Display 📊", page_icon="📊")
+st.set_page_config(page_title="📊 Data Frame Display ", page_icon="📊")
 
-st.markdown("# Data Frame Display")
-st.sidebar.header("Data Frame Display")
+st.markdown("# 📊 Data Frame Display")
+st.sidebar.header("📊 Data Frame Display")
 st.write(
     """This division illustrates the data frame we use for the EDA and Topic Modelling."""
 )
