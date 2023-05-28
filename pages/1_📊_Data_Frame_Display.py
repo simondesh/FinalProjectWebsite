@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
 
-df = pd.read_csv('data_for_EDA.csv')
+url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/data_for_EDA.csv'
+df = pd.read_csv(url)
 
 st.set_page_config(page_title="Data Frame Display 📊", page_icon="📊")
 
