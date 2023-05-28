@@ -10,3 +10,5 @@ st.sidebar.header("Our DataFrame")
 st.write(
     """This page displays the dataframe we use to conduct the EDA and also the topic modeling. The specific data collection, cleaning, preprocessing, and wrangling is explained in the other part"""
 )
+
+st.dataframe(df, width=700, height=300)
