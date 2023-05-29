@@ -23,7 +23,11 @@ st.markdown(
         
     **👈 You can select a division from the sidebar** to view our whole project parts by parts.
     
-    Also, we welcome you all to go to our Github: https://github.com/simondesh/FinalProjectWebsite
+    Also, we welcome you all to go to our Github repositories:
+
+    Link to backend repo: https://github.com/simondesh/FinalProjectDS105
+
+    Link to website repo: https://github.com/simondesh/FinalProjectWebsite
     """
 )
 
