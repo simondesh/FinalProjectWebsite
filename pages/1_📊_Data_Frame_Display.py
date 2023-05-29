@@ -1,23 +1,46 @@
 import streamlit as st
 import pandas as pd
 
-url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/data_for_EDA.csv'
-df = pd.read_csv(url)
+url_1 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/data_for_EDA.csv'
+df_1 = pd.read_csv(url_1)
+
+url_2 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/steam_clean.csv' 
+df_2 = pd.read_csv(url_2)
 
 st.set_page_config(page_title="📊 Data Frame Display ", page_icon="📊")
 
 st.markdown("# 📊 Data Frame Display")
 st.sidebar.header("📊 Data Frame Display")
+
 st.write(
-    """This division illustrates the data frame we use for the EDA and Topic Modelling."""
+    """
+    This division illustrates the data frames we use for the EDA and Topic Modelling
+        
+    """   
 )
 
-st.dataframe(df, width=700, height=300)
+st.subheader("1) Data Frame for EDA")
+
+st.write(
+    """
+    The first data frame is the data frame for EDA, which contains the data we use for the EDA. 
+    
+    We deleted some of the columns unused in EDA and also created few new columns for the EDA, such as rating. 
+    
+    Therefore, the difference between this `data_for_EDA.cs` and`steam_clean.csv` is quite obvious that the columns such as xxx are missing, while rating xxx are newly created. 
+    
+    Basically,`data_for_EDA.csv` is derived from `steam_clean.csv`, but it is more suitable for the EDA.
+    
+    Besides, during the topic modelling, we use the `steam_clean.csv`, which is the original data frame we use for the EDA. The specific data collection of this data frame will be presented later on the Data Collection page.
+    """
+)
+
+st.dataframe(df_1, width=700, height=300)
 
 st.markdown("""
 ## 🎮 Columns 🎮
 
-The following columns represent key attributes of steam game data.
+The following columns represent key attributes of steam game data in the `data_for_EDA.csv`.
 
 ---
 
@@ -55,3 +78,22 @@ The following columns represent key attributes of steam game data.
 - **genres:** The type of game, determined by its gameplay interaction.
 - **steamspy_tags:** The tags of the game produced by SteamSpy, a third-party Steam analytics website.
 """)
+
+
+st.subheader("2) Steam Clean Data Frame - Topic Modelling")
+st.write(
+    """
+    Besides, during the topic modelling, we use the `steam_clean.csv`, which is the original data frame we use for the EDA.
+    """
+)
+
+st.dataframe(df_2, width=700, height=300)
+
+st.markdown(
+    """
+    ### The same columns are explained below:
+    
+    
+    """
+     )
+

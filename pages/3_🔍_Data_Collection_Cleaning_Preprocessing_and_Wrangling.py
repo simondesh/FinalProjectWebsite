@@ -215,7 +215,7 @@ Secondly, there are two information under the tags column, including genres or c
 
 st.markdown(markdown_text7)
 
-
+st.markdown("---")
 
 st.subheader("⭐️ Merge Data: Using pd.merge()")
 st.write("""
