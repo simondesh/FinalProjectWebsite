@@ -5,6 +5,10 @@ st.set_page_config(page_title="💪🏼 Limitations and Future Work", page_icon=
 st.markdown("# 💪🏼 Limitations and Future Work")
 st.sidebar.header("💪🏼 Limitations and Future Work")
 
+url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/limitation.png'
+
+st.image(url, width=750)
+
 st.write(
     """
     Now it is the time for some confesions for our limitations.
