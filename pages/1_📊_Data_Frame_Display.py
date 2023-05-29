@@ -1,16 +1,16 @@
 import streamlit as st
 import pandas as pd
 
-url_1 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/data_for_EDA.csv'
+url_1 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/data_for_EDA.csv'
 df_1 = pd.read_csv(url_1)
 
-url_2 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/cleaned/steam_clean.csv' 
+url_2 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/steam_clean.csv' 
 df_2 = pd.read_csv(url_2)
 
 st.set_page_config(page_title="📊 Data Frame Display ", page_icon="📊")
 
 st.markdown("# 📊 Data Frame Display")
-st.sidebar.header("📊 Data Frame Display")
+
 
 st.write(
     """

@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="🔍 Data Collection, Cleaning, Preprocessing & Wrangling", page_icon="🔍")
 st.title("🔍 Data Collection, Cleaning, Preprocessing & Wrangling ")
 
 st.header("⭐️ Data Collection")
