@@ -7,7 +7,7 @@ st.sidebar.header("💪🏼 Limitations and Future Work")
 
 url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/limitation.png'
 
-st.image(url, width=750)
+st.image(url, width=500)
 
 st.write(
     """
@@ -20,6 +20,9 @@ st.write(
     Secondly, the price of the games are not as same as when they were released. Steam often provides discount on the game, the price we get in the data frame is the current price as of the api calling date. There is no way to get track of their previous price one by one so that we cannot analyse the influence of discount or not and also are unable to use their original to produce the model. 
 
     Thirdly, out of privacy protection regulation, we cannot get some interesting data that could better for constructing the model. There is another website called SteamDB, which provides a more thorough data of the games, such as the price of the skins, xxx in the game. However, only academic scholars can apply for the authoried use for scraping the web. Our application is denied so we can only stick to the steam spy api. Also, steam official websites does not allow api call for private information of game players, developers and publishers. The meterial we can use is quite limited. 
+    
+    Hence, in the future work, the first we need to solve is to get a more complete data. We can try to use other ways to call the steam spy api or try to get the authorisation of steamDB. Also, we can try to use other data sources, such as the data from the game developers and publishers. Also, we will try other machine learning models to see if we can get a better result.
+    
    """
 )
 
