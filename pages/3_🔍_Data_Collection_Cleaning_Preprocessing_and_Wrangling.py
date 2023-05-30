@@ -5,7 +5,53 @@ st.title("🔍 Data Collection, Cleaning, Preprocessing & Wrangling ")
 
 st.header("⭐️ Data Collection")
 
-st.write("We call for the Steam Spy API to produce the data")
+st.subheader("Our Goals")
+st.markdown("""
+Our primary objective is to analyze the features that contribute to a game's success on Steam. To achieve this, we will utilize the Steam and SteamSpy APIs to gather relevant data on games sold on Steam. 
+""")
+
+st.subheader("1) Generating a List of AppIDs")
+st.markdown("""
+To gather data for our analysis, we will need a list of AppIDs for games on Steam. However, the Steam API provides a large number of games, many of which may not be relevant to our study.  To overcome this, we will leverage the SteamSpy API, which provides genre information to curate a list of games that are relevant to our analysis. This is especially true because it allows all our data to have SteamSpy genres. ( + The Steam API has a lot of empty information and the SteamSpy is a curated subset of it organised by popularity without the invalid data. )
+""")
+            
+st.subheader("2) API Request Logic")
+st.markdown("""
+**1. API call handler**
+
+To handle API calls to both the Steam and SteamSpy APIs, we will develop a function that can effectively manage the different API requests. This function will handle the parsing and processing of responses from the APIs, ensuring smooth data retrieval. This means that for a given GameID we can obtain either the Steam or SteamSpy response through this method.
+
+**2. Request Handling**
+
+Making multiple API requests requires careful handling to manage potential errors and server limitations. We implement an error-handling wrapper and incorporate rate-limiting strategies to ensure reliable data retrieval. 
+
+""")
+
+st.subheader("3) Downloading Logic")
+st.markdown("""
+We created a function to download the data from the APIs and save it to a CSV file. This function will keep track of the progress and handle errors and interruptions, allowing us to resume the data collection process seamlessly. It is in other words the main brain of the data collection process. 
+
+We have a saving mechanism that saves every batch so that even in case of network disconnecting we have the saved-up data. It also creates an index to know where to start from in case of restart. This makes the code perfect to run on a server using CRON. 
+""")
+
+st.subheader("4) Gathering the Data")
+
+st.markdown("""
+Finally, here are examples of data gathering using our custom function. 
+""")
+
+st.code("""
+create_csv("Steamspy",stop = 20, container_size = 3, pause = 0.5)
+
+create_csv("Steam",stop = 20, container_size = 3, pause = 1)
+# The pause is the time between each API call.
+# The container size is the number of API calls per batch.
+# The stop is the index to stop at.
+""")
+
+st.markdown("""
+SteamSpy API allows for a higher rate of API calls per minute compared to the Steam API. The data collection code took a few days to run. 
+""")
 
 
 st.header("⭐ ️Initial Data Cleaning")
