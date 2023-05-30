@@ -17,10 +17,30 @@ st.write(
     
     To begin with, we identify the popularity of game by rating, which was produced with negative and positive reviews by ourselves. The laster methodology part will further illustrate how we made it. 
 
-    For the project, we first conducted a correlation analysis to observe what variables might have an influence on the popularity of the game, and also discover the positive relation between rating scores and number of owners to prove that these two variables can all represent the popularity.
+    For the project, we first conducted a correlation analysis to observe what variables might have an influence on the popularity of the game, and also discover the strong and positive relation between ratings and median number of owners to prove that these two variables can all represent the popularity.
 
-    After the correlation analysis, we selected the categorical and numeric features that we would like to explore further  - genres, categories, steam_spy_tags, price, release day month..., 
+    After the correlation analysis, we selected the categorical and numeric features that we would like to explore further  -  release year; genres, categories and steam_spy_tags; price. 
 
-    The full analysis is divided into two parts. First part goes to the exploratory data analysis on the effects of game type and pricing. Then, we use the XGBoost to build up a model to analyse the influence of the variables stated beforehand, on the purpose of creating a model to predict the popularity of games by forcasting their number of owners. 
+    The full analysis is divided into two parts. First part goes to the exploratory data analysis on the effects of release year, game type and pricing. In the second part, we use the XGBoost to build up a model to analyse the influence of the variables including achievements, price, ratings, and required age. The aim is to create a model to predict the popularity of games by forcasting their number of owners, with these varibles. You can see the small prediction application in the end of the topic modelling. Try to predict your games'popularity!
     """
 )
+
+st.mardown("---")
+
+st.write(
+    """
+    As shown in the home page, we have many side views on the left for you to browse. 
+    
+    Specifically, we would like to introduce the project in the following order:
+    
+    **0. Data Frame Display**
+    
+    In this part, you will see what data frame we produce from the data collection - `steam_clean.csv`. We will also show you the 'data_for_EDA.csv` which has gone through data preprocessing by removing non-english and non-windows games. This df is used for the EDA.
+    
+    The df for topic modelling is 
+    
+    **1. Correlation Analysis** 
+    
+    """
+)
+

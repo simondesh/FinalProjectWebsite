@@ -1,11 +1,14 @@
 import streamlit as st
 import pandas as pd
 
-url_1 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/data_for_EDA.csv'
+url_1 = 'https://raw.githubusercontent.com/simondesh/FinalProjectDS105/blob/main/data/cleaned/steam_clean.csv'
 df_1 = pd.read_csv(url_1)
 
-url_2 = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/data/steam_clean.csv' 
+url_2 = 'https://raw.githubusercontent.com/simondesh/FinalProjectDS105/blob/main/data/cleaned/data_for_EDA.csv'
 df_2 = pd.read_csv(url_2)
+
+url_3 = 'https://raw.githubusercontent.com/simondesh/FinalProjectDS105/blob/main/data/cleaned/data_model.csv'
+df_3 = pd.read_csv(url_3)
 
 st.set_page_config(page_title="📊 Data Frame Display ", page_icon="📊")
 
@@ -19,7 +22,25 @@ st.write(
     """   
 )
 
-st.subheader("1) Data Frame for EDA")
+
+st.subheader("1) Original Data Frame - steam_clean.csv")
+st.write(
+    """
+    Besides, during the topic modelling, we use the `steam_clean.csv`, which is the original data frame we use for the EDA and Topic Modelling.
+    """
+)
+
+st.dataframe(df_1, width=700, height=300)
+
+st.markdown(
+    """
+    #### The unchanged columns are `appid`, `name`, `ccu`, `achievements`, `average_playtime`, `median_playtime`, `price`, `developer`, `publisher`, `ratings`, `genres`, `categories`, `steamspy_tags`.
+    
+    The collection, cleaning, preprocessing and cleaning will be dicussed futher in the Data Collection page.
+    """
+     )
+
+st.subheader("2) Data Frame for EDA - data_for_EDA.csv")
 
 st.write(
     """
@@ -43,7 +64,7 @@ st.write(
     """
 )
 
-st.dataframe(df_1, width=700, height=300)
+st.dataframe(df_2, width=700, height=300)
 
 st.markdown("""
 ## 🎮 Columns 🎮
@@ -87,19 +108,10 @@ The following columns represent key attributes of steam game data in the `data_f
 - **steamspy_tags:** The tags of the game produced by SteamSpy, a third-party Steam analytics website.
 """)
 
+st.subheader("3) Data Frame for Topic Modelling - data_model.csv")
 
-st.subheader("2) Steam Clean Data Frame - Topic Modelling")
 st.write(
     """
-    Besides, during the topic modelling, we use the `steam_clean.csv`, which is the original data frame we use for the EDA.
-    """
+
+ """
 )
-
-st.dataframe(df_2, width=700, height=300)
-
-st.markdown(
-    """
-    #### The same columns are `appid`, `name`, `ccu`, `achievements`, `average_playtime`, `median_playtime`, `price`, `developer`, `publisher`, `ratings`, `genres`, `categories`, `steamspy_tags`.
-    """
-     )
-
