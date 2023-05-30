@@ -31,7 +31,7 @@ st.subheader("3) Downloading Logic")
 st.markdown("""
 We created a function to download the data from the APIs and save it to a CSV file. This function will keep track of the progress and handle errors and interruptions, allowing us to resume the data collection process seamlessly. It is in other words the main brain of the data collection process. 
 
-We have a saving mechanism that saves every batch so that even in case of network disconnecting we have the saved-up data. It also creates an index to know where to start from in case of restart. This makes the code perfect to run on a server using CRON. 
+We implement a mechanism that saves for every batch so that even in case of network disconnecting we have the saved-up data. It also creates an index to know where to resume from in case of restart. This makes the code perfect to run on a server using CRON. 
 """)
 
 st.subheader("4) Gathering the Data")

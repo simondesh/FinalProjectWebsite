@@ -35,8 +35,8 @@ with col3:
     pass
 st.write("2. Year Game Release: Considering that games released recently may not have reached their full potential, we only included games released before 2023.")
 st.write("3. Drop Duplicates and Create Columns: Duplicates were removed, and additional columns for game categories, genre, and tags were created to enrich the feature set.")
-st.write("4. Filter Platform: We filtered the dataset to focus on specific platforms of interest.")
-st.write("5. Release Date: We added columns representing the day of the week to capture the impact of the release day. We excluded the year as it is not a choice made by the publisher or developer.")
+st.write("4. Filter Platform: We filtered the dataset to focus on a specific platform of interest, windows.")
+st.write("5. Release Date: We added columns representing the day and month to capture the impact of the release date. We excluded the year as it is not a choice made by the publisher or developer.")
 
 # Model Training
 st.header("Model Training")
