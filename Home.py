@@ -36,7 +36,14 @@ st.markdown(
     Yinyue Wang
     
     The prodcution allocation is as follows:
-    
+    ||Shuyu Cao|Simon Desh|Siji He|Cynthia Wang|
+    |----|-----|----|----|---|
+    |Data Collection|-|√|-|-|
+    |Data Cleaning, Preprocessing and Wrangling|-|√|√|-|
+    |EDA|-|-|√|√|
+    |Topic Modeling|-|√|-|-|
+    |Report|√|√|√|-| 
+    |Web Creation|√|√|√|-| 
+    |Github Maintenance|√|√|√|-| 
     """
 )
-
