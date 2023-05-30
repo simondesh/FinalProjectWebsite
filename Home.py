@@ -29,14 +29,15 @@ st.markdown(
 
     Link to website repo: https://github.com/simondesh/FinalProjectWebsite
     
-    The producers of this project are:(in alphabetical order of last name)
-    Shuyu Cao
-    Simon Desh
-    Siji He
-    Yinyue Wang
+    The producers of this project are: (in alphabetical order of last name)
+    
+    - 👩‍🔬 Shuyu Cao (Cathy)
+    - 👨‍💻 Simon Deshayes
+    - 🦸‍ Sijia He (Scarlett)
+    - 👸 Yinyue Wang (Cynthia)
     
     The prodcution allocation is as follows:
-    ||Shuyu Cao|Simon Desh|Siji He|Cynthia Wang|
+    ||Cathy|Simon|Scarlett|Cynthia|
     |----|-----|----|----|---|
     |Data Collection|-|√|-|-|
     |Data Cleaning, Preprocessing and Wrangling|-|√|√|-|
