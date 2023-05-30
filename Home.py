@@ -42,7 +42,7 @@ st.markdown(
     |Data Cleaning, Preprocessing and Wrangling|-|√|√|-|
     |EDA|-|-|√|√|
     |Topic Modeling|-|√|-|-|
-    |Report|√|√|√|-| 
+    |Report|√|√|√|√| 
     |Web Creation|√|√|√|-| 
     |Github Maintenance|√|√|√|√| 
     """
