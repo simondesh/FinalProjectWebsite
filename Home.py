@@ -29,7 +29,7 @@ st.markdown(
 
     Link to website repo: https://github.com/simondesh/FinalProjectWebsite
     
-    The producers of this project are:(in alphabetical order of last name)
+    The producers of this project are: (in alphabetical order of last name)
     Shuyu Cao
     Simon Desh
     Siji He
