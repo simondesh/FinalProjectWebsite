@@ -108,8 +108,18 @@ But lower frequency does not mean lower ratings. Although RPG games only take a 
 st.markdown(markdown_text5)
 
 st.header("💶 Owners and Pricing")
-st.write("By observing the information of top ten successful games in terms of rating scores, we found that all of these games have achieved a significant milestone of having at least two million owners and the price varies from the lowest 3.99 to the highest 58.99. Continuing our analysis, we narrowed our focus to paid games with 20,000 or more owners. We first examined the distribution of ratings among these games.")
+st.write("We first examined the performance of games with 20,000 or more owners in terms of rating scores. We chose 20,000 as a milestone because most of games have owner ranges of 0-20,000 or 20,000-50,000. Then, we had to decide whether to keep them or exclude them in our analysis.")
 
+boxplot_owners = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/boxplot_owners.png'
+st.image(boxplot_owners)
+
+markdown_text8 = """
+There are two important observations to consider here.
+- when considering all the data, the average ratings for paid games are significantly lower compared to looking at games with 20,000 or more owners.
+- when examining all the data, the average ratings for paid games are actually lower than those for free games, but when focusing on games with 20,000 or more owners, the ratings for paid games are noticeably higher.
+
+One possible explanation for this discrepancy is that the rating calculation method used by [SteamDB](https://steamdb.info/blog/steamdb-rating/) introduces a bias towards 50%. This bias affects games with fewer total ratings more strongly, while games with a higher number of ratings are less impacted. In other words, games with less than 20,000 games tend to be biased strongly. Consequently, for our continued analysis, we will narrow our focus to paid games with 20,000 or more owners. 
+"""
 
 rating_distribution_paid_games = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/rating_distribution_paid_games.png'
 st.image(rating_distribution_paid_games)
@@ -118,7 +128,7 @@ st.image(rating_distribution_paid_games)
 markdown_text6 = """
 According to the plot, we could find the distribution of ratings is left-skewed with approximately half of the ratings falling within the 60% to 80% range, which indicates games generally receive a higher proportion of positive ratings compared to negative ratings. 
 
-Then we used seaborn to find the relationships between owners, pricing, ratings, log number of owners and log number of ratings as shown below:
+By looking at the initial heatmap we made, we can see that median owners and ratings have 0.099 correlations, but the correlation between log_owners and ratings is 0.31 which is better. That can be explained by skewed distribution of median owners with many extreme values. Thus, we continued our further analysis by focusing on log_owners and its relationship with ratings.
 """
 st.markdown(markdown_text6)
 
@@ -149,7 +159,7 @@ avg_ratings_developers = 'https://raw.githubusercontent.com/simondesh/FinalProje
 st.image(avg_ratings_developers)
 
 
-st.write("It is surprising to find that there is nearly no correlations between developer and ratings. It can be explained as one developer tends to develop many different genres of games, where genres seem to have greater influence on ratings. However, since we only examined the performances of 30 developers, we cannot conclude that developers have no impact on rating scores. A further analysis on the reputation of developers would be mentioned in model prediction section.")
+st.write("It is surprising to find that there is nearly no correlations between developer and ratings. It can be explained as one developer tends to develop many different genres of games, where genres seem to have greater influence on ratings. However, since we only examined the performances of 30 developers, we cannot conclude that developers have no impact on rating scores.")
 
 
 
