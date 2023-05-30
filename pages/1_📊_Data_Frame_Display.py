@@ -31,12 +31,12 @@ st.write(
     
     1. `data_for_EDA.csv` has 13 columns, while `steam_clean.csv` has 18 columns.
     2. `release_year` is in the `data_for_EDA.csv`, derived from `release_date` in `steam_clean.csv`.
-    3. `median_owners` is in the `data_for_EDA.csv`, derived from `owners` in `steam_clean.csv`.
+    3. `median_owners` is in the `data_for_EDA.csv`, derived from `owners` in `steam_clean.csv`, while `owners` is deleted in the `data_for_EDA.csv`.
     4. `languages` is deleted in the `data_for_EDA.csv`, because it is not used in the EDA.
     5. `english` and `platforms` are deleted in the `data_for_EDA.csv`, because we also select english games and games supporting windows playing on the data preprocessing stage.
     6. `genres`, `categories`, `steamspy_tags` are wrangled by pivoting the `steam_clean.csv`.
-    7. 
-    
+    7. `positive_ratings` and `negative_ratings` are deleted in the `data_for_EDA.csv`, because we use the `ratings` column to represent the rating of the game.
+
     Basically,`data_for_EDA.csv` is derived from `steam_clean.csv`, but it is more suitable for the EDA.
     
     Besides, during the topic modelling, we use the `steam_clean.csv`, which is the original data frame we use for the EDA. The specific data collection of this data frame will be presented later on the Data Collection page.
@@ -66,15 +66,15 @@ The following columns represent key attributes of steam game data in the `data_f
 ### 🕹️ Gameplay Information
 
 - **ccu:** The highest number of players simultaneously online.
-- **achievements:** These are challenges or tasks within the game that a player can complete to receive rewards, such as badges or points. 
+- **achievements:** These are rewards the games receive. 
 - **average_playtime:** The average amount of time players spend on the game.
 - **median_playtime:** The median amount of time players spend on the game.
 
 ### 📊 Ownership and Rating Information
 
 - **median_owners:** The median number of individuals who own the game. 
-- **total_ratings:** The total number of ratings the game has received. 
-- **ratings:** Detailed rating of the game.
+- **total_ratings:** Sum up of the number of positive and negative ratings.
+- **ratings:** Detailed rating of the game, based on the algorithm that will be discussed in the methodology section.
 
 ### 💵 Price Information
 
@@ -99,9 +99,7 @@ st.dataframe(df_2, width=700, height=300)
 
 st.markdown(
     """
-    ### The same columns are explained below:
-    
-    
+    #### The same columns are `appid`, `name`, `ccu`, `achievements`, `average_playtime`, `median_playtime`, `price`, `developer`, `publisher`, `ratings`, `genres`, `categories`, `steamspy_tags`.
     """
      )
 

@@ -5,10 +5,9 @@ st.set_page_config(page_title="🌍 Introduction", page_icon="🌍")
 st.markdown("# 🌍 Introduction")
 
 
-url = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/steam.png'
+url = 'https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg'
 
 st.image(url, width=750)
-
 
 st.write(
     """
