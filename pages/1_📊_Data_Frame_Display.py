@@ -14,7 +14,7 @@ st.markdown("# 📊 Data Frame Display")
 
 st.write(
     """
-    This division illustrates the data frames we use for the EDA and Topic Modelling
+    This division illustrates the data frames we use for the EDA and Topic Modelling.
         
     """   
 )
@@ -27,7 +27,15 @@ st.write(
     
     We deleted some of the columns unused in EDA and also created few new columns for the EDA, such as rating. 
     
-    Therefore, the difference between this `data_for_EDA.cs` and`steam_clean.csv` is quite obvious that the columns such as xxx are missing, while rating xxx are newly created. 
+    Therefore, the differences between this `data_for_EDA.cs` and`steam_clean.csv` are quite obvious:
+    
+    1. `data_for_EDA.csv` has 13 columns, while `steam_clean.csv` has 18 columns.
+    2. `release_year` is in the `data_for_EDA.csv`, derived from `release_date` in `steam_clean.csv`.
+    3. `median_owners` is in the `data_for_EDA.csv`, derived from `owners` in `steam_clean.csv`.
+    4. `languages` is deleted in the `data_for_EDA.csv`, because it is not used in the EDA.
+    5. `english` and `platforms` are deleted in the `data_for_EDA.csv`, because we also select english games and games supporting windows playing on the data preprocessing stage.
+    6. `genres`, `categories`, `steamspy_tags` are wrangled by pivoting the `steam_clean.csv`.
+    7. 
     
     Basically,`data_for_EDA.csv` is derived from `steam_clean.csv`, but it is more suitable for the EDA.
     
