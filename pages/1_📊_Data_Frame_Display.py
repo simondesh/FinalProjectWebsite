@@ -54,7 +54,7 @@ st.write(
     3. `median_owners` is in the `data_for_EDA.csv`, derived from `owners` in `steam_clean.csv`, while `owners` is deleted in the `data_for_EDA.csv`.
     4. `languages` is deleted in the `data_for_EDA.csv`, because it is not used in the EDA.
     5. `english` and `platforms` are deleted in the `data_for_EDA.csv`, because we also select english games and games supporting windows playing on the data preprocessing stage.
-    6. `genres`, `categories`, `steamspy_tags` are wrangled by pivoting the `steam_clean.csv`.
+    6. `genres`, `categories`, `steamspy_tags` are wrangled by pivoting the `steam_clean.csv`, the genres selected are based on the wordcloud created. This will be further explained in the data wrangling part. 
     7. `positive_ratings` and `negative_ratings` are deleted in the `data_for_EDA.csv`, because we use the `ratings` column to represent the rating of the game.
 
     Basically,`data_for_EDA.csv` is derived from `steam_clean.csv`, but it is more suitable for the EDA.
@@ -105,12 +105,16 @@ The following columns represent key attributes of steam game data in the `data_f
 - **Here is a pivoting table of the genres, categories and tags of the game. It will be further analysed in the wrangling part in Data Collection Sectioon**
 """)
 
+st.markdown("---")
 st.subheader("3) Data Frame for Topic Modelling - data_model.csv")
-
+st.dataframe(df_3, width=700, height=300)
 st.write(
     """
     This data frame is used for the topic modelling. It is quite similar with the `data_for_EDA.csv`, but it has some differences:
     1. It uses `day` and `month` column to represent the release date of the game, while `release_year` is deleted.
-    2. 
+    2. It keeps the `owners` column, while `median_owners` is not shown. However, it is created afterwards in the topic modelling.
+    3. It keeps the non-english games. 
+    
+    Other than these, it is basically the same with the `data_for_EDA.csv`. Their way of conducting the pivoting of genres are the same and they all have deleted the non windows games. 
  """
 )

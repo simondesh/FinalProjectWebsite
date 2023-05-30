@@ -9,6 +9,7 @@ url = 'https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg'
 
 st.image(url, width=750)
 
+st.subheader("1) Project Introduction")
 st.write(
     """
     Steam, which provides access to thousands of games, is one of the biggest platforms for game players, publishers and developers. New games released by the Steam always become the hot titles online, and millions of players are playing games via Steam every day. Until now, there are around games on Steam. The number of games just came out as of Septermber in 2022 reaches to 50,000. Apart from new games, many old games such as CSGO have made a legend in the computer game history. 
@@ -25,7 +26,9 @@ st.write(
     """
 )
 
-st.mardown("---")
+st.markdown("---")
+
+st.subheader("2) Website Structure")
 
 st.write(
     """
@@ -35,12 +38,31 @@ st.write(
     
     **0. Data Frame Display**
     
-    In this part, you will see what data frame we produce from the data collection - `steam_clean.csv`. We will also show you the 'data_for_EDA.csv` which has gone through data preprocessing by removing non-english and non-windows games. This df is used for the EDA.
+    In this part, you will see what data frame we produce from the data collection - `steam_clean.csv`. We will then show you the 'data_for_EDA.csv` which has gone through data preprocessing by removing non-english and non-windows games. This df is used for the EDA.
     
-    The df for topic modelling is 
+    We will also show you the `data_model.csv` which is used for the topic modelling.
     
-    **1. Correlation Analysis** 
+    **1. Introduction** 
     
+    In this part, you will see what is the project about and the website's structure.
+    
+    **2. Data Collection, Cleaning, Pre-Processing, and Wrangling**
+    
+    In this part, you will get to know how we collect the data, clean the data, pre-process the data, and wrangle the data.
+    
+    **3. Exploratory Data Analysis**
+    
+    In this part, you will see the EDA on the effects of release year, game type, pricing, developers and publishers.
+    
+    **4. Topic Modelling**
+    
+    In this part, you will observe the topic modelling on the effects of achievements, price, ratings, and required age.
+    
+    **5. Limitations and Future Work**
+    
+    **6. Conclusion**
+    
+    I summarise all the findings in this part.
     """
 )
 
