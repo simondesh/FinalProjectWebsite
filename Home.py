@@ -28,6 +28,15 @@ st.markdown(
     Link to backend repo: https://github.com/simondesh/FinalProjectDS105
 
     Link to website repo: https://github.com/simondesh/FinalProjectWebsite
+    
+    The producers of this project are:(in alphabetical order of last name)
+    Shuyu Cao
+    Simon Desh
+    Siji He
+    Yinyue Wang
+    
+    The prodcution allocation is as follows:
+    
     """
 )
 
