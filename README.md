@@ -2,6 +2,8 @@
 
 This repo contains our final webpage. If you wanna check our source code, please see this repository: [FinalProjectDS105](https://github.com/simondesh/FinalProjectDS105)
 
+the website is deployed on streamlit: [https://simondesh-finalprojectwebsite.streamlit.app/](https://simondesh-finalprojectwebsite.streamlit.app/)
+
 ## How to use the repo
 
 1. Clone the repository to your local machine
