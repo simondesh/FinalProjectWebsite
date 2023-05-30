@@ -9,6 +9,8 @@ st.set_page_config(page_title="💡 Topic Modelling - XBGoost", page_icon="💡"
 # Title
 st.title("💡 Topic Modelling - XBGoost")
 
+st.write('more complete analysis of each graph can be found in the python notebook')
+
 # Introduction
 st.header("Introduction")
 st.write("The goal of this report is to create a machine learning model that 'predicts' the popularity of games, measured by the number of owners. We will utilize the powerful XGBoost algorithm to capture the complex relationships between features and the target variable. XGBoost is particularly suitable for handling large datasets with skewed and partially missing data, as well as categorical variables. It excels at capturing non-linear relationships and provides insights into feature importance.")
@@ -44,7 +46,7 @@ st.write("Using the prepared features, we trained our XGBoost model. XGBoost's a
 
 # Performance Analysis
 st.header("Performance Analysis")
-st.write("To assess the accuracy of our model, we compared its performance with the highest correlation achieved by individual features. Despite no feature showing a strong correlation with median owners, our model achieved significantly better performance, with an accuracy of approximately 70%. The ROC curves for all classes were above 0.5 AUC, indicating that our model performs better than random guessing.")
+st.write("Compared to the highest correlation achieved by individual features (0.32), our model demonstrates significantly better performance in owner prediction, with an accuracy of approximately 70%. The ROC curves for all classes were above 0.5 AUC, indicating that our model performs better than random guessing.")
 image2 = Image.open("./src/images/model/RankingCorrelation.png")
 image3 = Image.open("./src/images/model/ROCCurves.png")
 
