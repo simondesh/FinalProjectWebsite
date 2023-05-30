@@ -5,7 +5,7 @@ st.set_page_config(page_title="📈 EDA", page_icon="📈")
 
 st.markdown("# 📈 Exploratory Data Analysis")
 
-st.write("For further analysis, we focused on the influence of each factor, including release year, genres, developers and publishers, number of owners and pricing, on rating scores (which is calculated in wrangling section, and we define it as the indicator of successful game performance." )
+st.write("For further analysis, we focused on the influence of each factor, including release year, genres, developers and publishers, number of owners and pricing, on rating scores (which is calculated in wrangling section), and we define it as the indicator of successful game performance." )
 
 st.header("📌 Data Preprocess and Overview")
 
@@ -40,6 +40,7 @@ Initial observations we made:
 
 Based on the initial correlations we found, we then did a closer check of our assumptions.
 """
+st.markdown(markdown_text2)
 
 st.header("📆 Release Year")
 st.write("From the data overview above, we can notice that rating scores seem to decrease overtime, but the number of releases has been increasing overtime. Thus, we examined the ratings distribution by release year here.")
@@ -120,6 +121,7 @@ There are two important observations to consider here.
 
 One possible explanation for this discrepancy is that the rating calculation method used by [SteamDB](https://steamdb.info/blog/steamdb-rating/) introduces a bias towards 50%. This bias affects games with fewer total ratings more strongly, while games with a higher number of ratings are less impacted. In other words, games with less than 20,000 games tend to be biased strongly. Consequently, for our continued analysis, we will narrow our focus to paid games with 20,000 or more owners. 
 """
+st.markdown(markdown_text8)
 
 rating_distribution_paid_games = 'https://raw.githubusercontent.com/simondesh/FinalProjectWebsite/main/src/images/rating_distribution_paid_games.png'
 st.image(rating_distribution_paid_games)
