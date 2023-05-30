@@ -44,6 +44,6 @@ st.markdown(
     |Topic Modeling|-|√|-|-|
     |Report|√|√|√|-| 
     |Web Creation|√|√|√|-| 
-    |Github Maintenance|√|√|√|-| 
+    |Github Maintenance|√|√|√|√| 
     """
 )
